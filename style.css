@@ -40,13 +40,16 @@ html, body{
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1px;
 }
 .item-1{
+    position: relative;
     grid-column: 1/3;
     grid-row: 1/3;
     background-color: blue;
     border-top-left-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .item-2{
     grid-column: 3/4;
@@ -57,10 +60,14 @@ html, body{
     grid-template-columns: repeat(3, 1fr);
 }
 .item-3{
+    position: relative;
     grid-column: 4/6;
     grid-row: 1/3;
     background-color: red;
     border-top-right-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .item-4{
     grid-column: 1/3;
@@ -71,9 +78,9 @@ html, body{
     grid-template-columns: repeat(6, 1fr);
 }
 .item-5{
+    position: relative;
     grid-column: 3/4;
     grid-row: 3/4;
-    background-color: rgb(189, 163, 163);
 }
 .item-6{
     grid-column: 4/6;
@@ -90,7 +97,8 @@ html, body{
     background-color: yellow;
     border-bottom-left-radius: 5%;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
 .item-8{
     grid-column: 3/4;
@@ -101,27 +109,82 @@ html, body{
     grid-template-columns: repeat(3, 1fr);
 }
 .item-9{
+    position: relative;
     grid-column: 4/6;
     grid-row: 4/6;
     background-color: green;
     border-bottom-right-radius: 5%;
-}
-.white-box{
-    position: relative;
-    border: 1px solid #000000;
-
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 
-.items{
+.items-yellow{
     position: absolute;
     height: 80%;
     width: 80%;
-    border: 3px solid #646464;
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+.items-green{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+.items-red{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+.items-blue{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+
+.guti-box{
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    background-color: rgb(98, 98, 98);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .blue{
@@ -137,38 +200,94 @@ html, body{
     background-color: green;
 }
 
-.guti-1{
-    position: absolute;
-    height: 80%;
-    width: 80%;
-    border-radius: 50%;
-    border: 2px solid #c61313;
-    box-sizing: border-box;
+.white-box {
+    position: relative;
+    border: 1px solid #000000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-.guti-2{
-    position: absolute;
-    height: 80%;
-    width: 80%;
-    border-radius: 50%;
-    border: 2px solid #c61313;
-    box-sizing: border-box;
-    margin-left: 10%;
+
+.guti-wrapper {
+    width: 10%; /* Set the width to 25% for 4 boxes per row */
+    height: 10%;
+    box-sizing: border-box; /* Include padding and border in the width */
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
-.guti-3{
+.guti-red {
     position: absolute;
-    height: 80%;
-    width: 80%;
+    height: 900%;
+    width: 900%;
     border-radius: 50%;
-    border: 2px solid #c61313;
-    box-sizing: border-box;
-    margin-left: 20%;
+    background: rgba(121, 0, 0, 0.5);
+    border: 1px solid #520000;
 }
-.guti-4{
+.guti-green {
     position: absolute;
-    height: 80%;
-    width: 80%;
+    height: 900%;
+    width: 900%;
     border-radius: 50%;
-    border: 2px solid #c61313;
-    box-sizing: border-box;
-    margin-left: 30%;
+    background: rgba(0, 148, 0, 0.7);
+    border: 1px solid #004f00;
+}
+
+.guti-blue {
+    position: absolute;
+    height: 900%;
+    width: 900%;
+    border-radius: 50%;
+    background: rgba(0, 0, 255, 0.7);
+    border: 1px solid #00003a;
+}
+
+.guti-yellow {
+    position: absolute;
+    height: 900%;
+    width: 900%;
+    border-radius: 50%;
+    background: rgba(255, 234, 0, 0.7);
+    border: 1px solid #000000;
+}
+.finishbox-red{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: red;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.finishbox-yellow{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-top: 50%;
+}
+.finishbox-blue{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: blue;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+.finishbox-green{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: green;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    margin-left: 50%;
+}
+.star{
+    transform: translate(50%, 50%);
+    height: 50%;
+    width: 50%;
+    background-color: #969696;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
